@@ -1,9 +1,6 @@
 # Decord
 
-![CI Build](https://github.com/dmlc/decord/workflows/C/C++%20CI/badge.svg?branch=master)
-![Release Build](https://github.com/dmlc/decord/workflows/Publish%20to%20PYPI/badge.svg?branch=master)
-[![PyPI](https://img.shields.io/pypi/v/decord.svg)](https://pypi.python.org/pypi/decord)
-[![Downloads](http://pepy.tech/badge/decord)](http://pepy.tech/project/decord)
+This fork of [Decord](https://github.com/dmlc/decord) fixes the compilation with ffmpeg 5 together with CUDA support.
 
 ![symbol](docs/symbol.png)
 
@@ -68,7 +65,7 @@ sudo apt-get install -y ffmpeg libavcodec-dev libavfilter-dev libavformat-dev li
 Clone the repo recursively(important)
 
 ```bash
-git clone --recursive https://github.com/dmlc/decord
+git clone --recursive https://github.com/sueskind/decord
 ```
 
 Build the shared library in source root directory:
@@ -80,7 +77,7 @@ cmake .. -DUSE_CUDA=0 -DCMAKE_BUILD_TYPE=Release
 make
 ```
 
-you can specify `-DUSE_CUDA=ON` or `-DUSE_CUDA=/path/to/cuda` or `-DUSE_CUDA=ON` `-DCMAKE_CUDA_COMPILER=/path/to/cuda/nvcc` to enable NVDEC hardware accelerated decoding:
+You can specify `-DUSE_CUDA=ON` or `-DUSE_CUDA=/path/to/cuda` or `-DUSE_CUDA=ON` `-DCMAKE_CUDA_COMPILER=/path/to/cuda/nvcc` to enable NVDEC hardware accelerated decoding:
 
 ```bash
 cmake .. -DUSE_CUDA=ON -DCMAKE_BUILD_TYPE=Release
@@ -125,7 +122,7 @@ brew install cmake ffmpeg
 Clone the repo recursively(important)
 
 ```bash
-git clone --recursive https://github.com/dmlc/decord
+git clone --recursive https://github.com/sueskind/decord
 ```
 
 Then go to root directory build shared library:
@@ -160,7 +157,7 @@ When dependencies are ready, open command line prompt:
 
 ```bash
 cd your-workspace
-git clone --recursive https://github.com/dmlc/decord
+git clone --recursive https://github.com/sueskind/decord
 cd decord
 mkdir build
 cd build
